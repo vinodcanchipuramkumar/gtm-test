@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>GTM Test</title>
 
-  <!-- (Optional) Initialize dataLayer BEFORE GTM -->
+  <!-- (Optional) Initialize dataLayer BEFORE GTM/gtag -->
   <script>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: 'page_init', page_type: 'home' });
   </script>
 
-  <!-- Google Tag Manager -->
+  <!-- Google Tag Manager (HEAD) -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,10 +20,22 @@
     })(window,document,'script','dataLayer','GTM-KGRVSFF5');
   </script>
   <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) — GA4 -->
+  https://www.googletagmanager.com/gtag/js?id=G-YKVMY7ENKQ</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // Sends the default GA4 page_view
+    gtag('config', 'G-YKVMY7ENKQ');
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript>https://www.googletagmanager.com/ns.html?id=GTM-KGRVSFF5</iframe></noscript>
+  <noscript>
+    https://www.googletagmanager.com/ns.html?id=GTM-KGRVSFF5</iframe>
+  </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <h1>Hello GTM</h1>
